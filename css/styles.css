@@ -1,0 +1,19 @@
+:root {
+    --fc-secondary: grey;
+}
+
+.nav__bar--item {
+    list-style-type: none;
+}
+
+.nav__bar--link {
+    text-decoration-line: none;
+}
+
+.nav__bottom {
+    text-align: center;
+}
+
+.nav__bottom--link-color {
+    color: var(--fc-secondary);
+}
