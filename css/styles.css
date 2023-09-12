@@ -2,10 +2,19 @@
     /* Font Family */
     --ff-tertiary: "Poppins", sans-serif;
     /* Font Colors */
-    --fc-secondary: grey;
+    --fc-secondary: #FAF9F6;
+    --fc-tertiary: grey;
 }
 
 /* Pop Up */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
 
 .popup{
     /* background-color: #888888; */
@@ -36,9 +45,6 @@
     display: block;
     margin: 0 auto;
 }
-.show {
-    display: block;
-}
 
 .popup-open {
     overflow:hidden;
@@ -53,9 +59,14 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(9px);
+    z-index: 20;
 }
 
 /* All NAV */
+.nav__bar {
+    position: absolute;
+    margin-top: 0;
+}
 .nav__bar--item {
     list-style-type: none;
 }
@@ -69,5 +80,70 @@
 }
 
 .nav__bottom--link-color {
+    color: var(--fc-tertiary);
+}
+
+/* Homepage Banner */
+.homepage__banner-container {
+    height: 800px;
+    width: 100vw;
+    position: relative;
+}
+
+.homepage__banner-image {
+    background-image: url("../images/richard-horvath-cPccYbPrF-A-unsplash.jpg");
+    width: 100%;
+    position: absolute;
+    background-position: 10% 30%;
+    -webkit-filter: blur(2px);
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.homepage__banner-title {
+    font-size: 2.75rem;
     color: var(--fc-secondary);
+    text-align: center;
+    padding-top: 10rem;
+    color: white;
+    position: relative;
+}
+
+/* Mission Container */
+.mission__container {
+    min-width: 30%;
+    max-width: 60%;
+    background-color: white;
+    padding: 20px 30px;
+    margin: 0 auto;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px rgba(128, 128, 128, .3);
+    position: relative;
+    transform: translateY(-100px);
+    z-index: auto;
+}
+
+.mission__content {
+    /* background-color: red; */ /* testing purposes */
+    width: 100%;
+    height: 100%;
+}
+
+.mission__content button {
+    padding: 1rem 3.3rem;
+    border-radius: 30px;
+    background-color: white;
+    border: 2px solid #0058FF;
+    color: #0058FF;
+    box-shadow: none;
+    margin-top: 1.5rem;
+    transition: 200ms ease-in-out;
+    /* need font */
+}
+
+.mission__content button:hover {
+    background-color: #0058FF;
+    color: white;
 }
