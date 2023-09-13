@@ -132,6 +132,8 @@ body {
     text-align: center;
     padding-top: 10rem;
     position: inherit;
+    margin: 0 auto;
+    transform: translateX(-20px);
 }
 
 /* Mission Container */
