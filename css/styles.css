@@ -1,9 +1,15 @@
 :root {
     /* Font Family */
-    --ff-tertiary: "Poppins", sans-serif;
+    --ff-primary: 'Inter', sans-serif;
+    --ff-tertiary:'Space Mono', monospace;
+    /* Font Weight */
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
     /* Font Colors */
-    --fc-secondary: #FAF9F6;
-    --fc-tertiary: grey;
+    --fc-offwhite: #FAF9F6;
+    --fc-grey: grey;
+    --fc-blue-links: #0058FF;
 }
 
 /* Pop Up */
@@ -28,7 +34,6 @@ body {
     top: 50%;
     
     display: none;
-    font-family: var(--ff-tertiary);
     text-align: center;
     z-index: 999;
 }
@@ -37,18 +42,19 @@ body {
     margin: auto;
     padding: 30px;
     width: 40rem;
-    font-weight: bolder;
+    font-family: var(--ff-tertiary);
     border-radius: 8px;
     box-shadow: 8px 8px 8px rgba(0, 0, 0,0.4);
 }
 .popup__content button {
     display: block;
     margin: 0 auto;
+    font-family: var(--ff-tertiary);
 }
 
 .popup-open {
     overflow:hidden;
-    background-color: #888888;
+    background-color: var(--fc-grey);
 }
 
 .blur-background::before {
@@ -64,23 +70,40 @@ body {
 
 /* All NAV */
 .nav__bar {
-    position: absolute;
+    position: fixed;
     margin-top: 0;
+    top: 0px;
+    height: 90px;
+    width: 100%;
+    z-index: 10;
+    background-color: #151619;
 }
+.nav__bar-container {
+
+}
+
 .nav__bar--item {
     list-style-type: none;
+    display: inline-block;
+    font: normal normal var(--fw-normal) 16px var(--ff-primary);
 }
 
 .nav__bar--link {
     text-decoration-line: none;
+    color: var(--fc-offwhite);
 }
 
 .nav__bottom {
     text-align: center;
+    font-family: var(--ff-primary);
 }
 
 .nav__bottom--link-color {
-    color: var(--fc-tertiary);
+    color: var(--fc-grey);
+}
+
+.alternativeapplication {
+    font-family: var(--ff-tertiary);
 }
 
 /* Homepage Banner */
@@ -103,7 +126,8 @@ body {
 
 .homepage__banner-title {
     font-size: 2.75rem;
-    color: var(--fc-secondary);
+    color: var(--fc-offwhite);
+    font: normal normal var(--fw-extrabold) 80px var(--ff-primary);
     text-align: center;
     padding-top: 10rem;
     color: white;
@@ -129,21 +153,62 @@ body {
     /* background-color: red; */ /* testing purposes */
     width: 100%;
     height: 100%;
+    font-family: var(--ff-primary);
 }
 
 .mission__content button {
     padding: 1rem 3.3rem;
     border-radius: 30px;
     background-color: white;
-    border: 2px solid #0058FF;
-    color: #0058FF;
+    border: 2px solid var(--fc-blue-links);
+    font-family: var(--ff-primary);
+    color: var(--fc-blue-links);
     box-shadow: none;
     margin-top: 1.5rem;
     transition: 200ms ease-in-out;
     /* need font */
 }
 
+.mission__content-title {
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+}
+
 .mission__content button:hover {
-    background-color: #0058FF;
+    background-color: var(--fc-blue-links);
     color: white;
+}
+
+/* Subsection */
+
+.subsection__title {
+    font-weight: var(--fw-bold);
+    font-size: 72px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subsection__link {
+    text-decoration-line: none;
+    font-weight: var(--fw-bold);
+    color: var(--fc-blue-links);
+}
+
+.subsection__faq {
+    font-family: var(--ff-primary);
+    width: 100%;
+    max-width: 48em;
+    margin: 0 auto;
+}
+
+.subsection__faq-question-item-title {
+    font-size: 26px;
+    margin-bottom: 0.2em;
+}
+
+.subsection__faq-question-item-paragraph {
+    font-size: 21px;
+    margin-top: 0;
+    line-height: 1;
+    padding-bottom: 0.8em;
 }
