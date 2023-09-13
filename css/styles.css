@@ -8,7 +8,8 @@
     --fw-extrabold: 800;
     /* Font Colors */
     --fc-offwhite: #FAF9F6;
-    --fc-grey: grey;
+    --fc-grey: 128, 128, 128;
+    --fc-darkgrey: #151619;
     --fc-blue-links: #0058FF;
 }
 
@@ -124,14 +125,13 @@ body {
     background-size: cover;
 }
 
-.homepage__banner-title {
-    font-size: 2.75rem;
+#homepage__banner-title {
+    font-size: 3em !important;
     color: var(--fc-offwhite);
     font: normal normal var(--fw-extrabold) 80px var(--ff-primary);
     text-align: center;
     padding-top: 10rem;
-    color: white;
-    position: relative;
+    position: inherit;
 }
 
 /* Mission Container */
@@ -141,9 +141,9 @@ body {
     background-color: white;
     padding: 20px 30px;
     margin: 0 auto;
-    border: 1px solid rgba(128, 128, 128, 0.4);
+    border: 1px solid rgba(var(--fc-grey), .4);
     border-radius: 6px;
-    box-shadow: 0px 10px 20px rgba(128, 128, 128, .3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0,0.3);
     position: relative;
     transform: translateY(-100px);
     z-index: auto;
@@ -171,7 +171,7 @@ body {
 
 .mission__content-title {
     font-weight: var(--fw-bold);
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .mission__content button:hover {
@@ -204,11 +204,47 @@ body {
 .subsection__faq-question-item-title {
     font-size: 26px;
     margin-bottom: 0.2em;
+    width: 100%;
+    padding: .6em;
+    text-align: left;
+    border: 2px solid rgba(var(--fc-grey), .3);
+    background-color: white;
+    cursor: pointer;
+    transition:  background-color 300ms ease-in-out, color 300ms ease-in-out;
+    color: black;
+}
+
+.subsection__faq-question-item-title:after {
+    content: '\02795';
+    font-size: 13px;
+    color: black;
+    float: right;
+    transition: color 0.3s ease;
+    margin-left: 5px;
+    transform: translateY(5px);
+}
+
+.subsection__faq-question-item-title:hover, .subsection__faq-question-item-title-active {
+    background-color: var(--fc-blue-links);
+    color: var(--fc-offwhite);
+}
+
+.subsection__faq-question-item-title-active:after {
+    content: "\2796";
+    color: var(--fc-offwhite);
+}
+
+.subsection__dropdown-item {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 300ms ease;
 }
 
 .subsection__faq-question-item-paragraph {
     font-size: 21px;
     margin-top: 0;
     line-height: 1;
+    max-width: 36em;
+    transform: translateX(15px);
     padding-bottom: 0.8em;
 }
