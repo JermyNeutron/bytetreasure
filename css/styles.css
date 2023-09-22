@@ -186,6 +186,34 @@ body {
     transform: translateX(-20px);
 }
 
+.homepage__banner-trending {
+    position: inherit;
+    width: 100%;
+    margin-top: 3em;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    font-family: var(--ff-primary);
+    color: white;
+    align-items: center;
+}
+
+.trending-item {
+    margin-left: 1em;
+    border: ;
+    background-color: rgba(0, 0, 0, 0);
+    border: white solid 2px;
+    color: white;
+    width: 6em;
+    border-radius: 45px;
+    height: 3em;
+}
+
+.trending-item:hover {
+    background-color: var(--fc-blue-links);
+    cursor: pointer;
+}
+
 #search {
     position: inherit;
     display: block;
