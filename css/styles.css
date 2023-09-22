@@ -186,6 +186,24 @@ body {
     transform: translateX(-20px);
 }
 
+#search {
+    position: inherit;
+    display: block;
+    width: 45%;
+    height: 3em;
+    border-radius: 45px;
+    border-style: none;
+    padding: 0 15px 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+    font-size: 24px;
+}
+
+#search:focus {
+    outline: none;
+}
+
 /* Mission Container */
 .mission__container {
     min-width: 30%;
