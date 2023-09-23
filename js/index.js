@@ -5,7 +5,7 @@
 const body = document.body;
 
 // Popup for only index.html
-console.log('Current pathname:', window.location.pathname);
+
 if (window.location.pathname === '/projects/bytetreasure/html/index.html') {
     window.addEventListener('load', function() {
         setTimeout(() => {
