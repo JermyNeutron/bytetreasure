@@ -203,6 +203,7 @@ body {
 .trending-item {
     margin-left: 1em;
     background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
     border: white solid 2px;
     color: white;
     width: 6em;
@@ -211,7 +212,8 @@ body {
 }
 
 .trending-item:hover {
-    background-color: var(--fc-blue-links);
+    background-color: rgba(0, 88, 255, .5);
+    border-color: var(--fc-blue-links);
     cursor: pointer;
 }
 
