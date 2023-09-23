@@ -249,6 +249,13 @@ body {
     position: relative;
     transform: translateY(-100px);
     z-index: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.mission__container img {
+    flex: 1;
+    padding: 0;
 }
 
 .mission__content {
@@ -256,6 +263,12 @@ body {
     width: 100%;
     height: 100%;
     font-family: var(--ff-primary);
+    display: flex;
+    flex-flow: column wrap;
+    flex: 3;
+    align-items: left;
+    margin-right: 2.5em;
+    margin-left: 1em;
 }
 
 .subsection__button-1 {
@@ -266,7 +279,9 @@ body {
     font-family: var(--ff-primary);
     color: var(--fc-blue-links);
     box-shadow: none;
-    margin-top: 1.5rem;
+    margin-top: .5em;
+    margin-bottom: 1rem;
+    margin-left: 1.4em;
     transition: 200ms ease-in-out;
     cursor: pointer;
     /* need font */
@@ -275,6 +290,9 @@ body {
 .mission__content-title {
     font-weight: var(--fw-bold);
     font-size: 24px;
+    margin-top: 1;
+    margin-bottom: 0.5em;
+    left: 0;
 }
 
 .mission__content button:hover {
@@ -283,7 +301,9 @@ body {
 }
 
 .mission__content-paragraph {
-    font-size: 21px;
+    font-size: 18px;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 /* Subsection */
